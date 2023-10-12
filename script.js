@@ -1,23 +1,21 @@
 //HTML kobling
-const cat_list = document.querySelector("#cat_list_ID");
-
-const general_list = document.querySelector ("#general_list_ID");
+const cat_emoji_list = document.querySelector("#cat_emoji_list_ID");
+const dog_emoji_list = document.querySelector("#dog_emote_list_ID")
 
 //Emoji-ressurs
 const emojis = {
-  catEmojis: ["😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾", "🐱"],
-  dogEmojis: ["🐶", "🐕", "🦮", "🐩", "🐾", "🐺", "🦊", "🦝", "🐕‍🦺", "🐩‍🦱"],
+  cat_emojis: ["😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾", "🐱"],
+  dog_emojis: ["🐶", "🐕", "🦮", "🐩", "🐾", "🐺", "🦊", "🦝", "🐕‍🦺", "🐩‍🦱"],
 };
 
-function renderEmojis() {
-  for (i = 0; i < emojis.catEmojis.length; i++) {
-    let newLiElement = document.createElement("li");
-    newLiElement.innerText = emojis.catEmojis[i];
-    newLiElement.addEventListener("click", () => {
-      navigator.clipboard.writeText(newLiElement.innerText);
-      alert(newLiElement.innerText + " is now on your clipboard ");
-      console.log(newLiElement.innerText);
+function display_emojis() {
+    for (a = 0; a < emojis.dog_emojis.length; a++) {
+        let li_element_a = document.createElement("li");
+        li_element_a.innerText = emojis.cat_emojis[a];
+        li_element_a.addEventListener("click", () => {
+        navigator.clipboard.writeText(li_element_a.innerText);
+        console.log(li_element_a.innerText);
     });
-    cat_list.appendChild(newLiElement);
-  }
-}
+    cat_emoji_list.appendChild(li_element_a);
+  };
+};

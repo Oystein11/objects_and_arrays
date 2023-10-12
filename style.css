@@ -15,7 +15,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: wrap;
+    flex-direction: column;
     gap: 5em;
     background-color: #0e4749;
 }
@@ -24,6 +24,12 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.emotes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 1em;
 }
 

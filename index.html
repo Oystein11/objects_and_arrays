@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +9,20 @@
 </head>
 <body>
     <header>
-        <h1 class="p">Cat and Dog Emojis</h1>
+        <h1 class="p">Katte- og Hundeemojier</h1>
     </header>
     <main>
-        <section class="picture">
-            <img class="img" src="cat_picture.jpg"/>
+        <section class="text">
+            <p class="p">Trykk på knappen for å få opp en liste med emojier. </p>
+            <p class="p">Trykk på en emoji i listen for å legge den til i utklippstavlen din.</p>
+            <p class="p">Trykk CTRL + V i hvilket som helst tekstfelt for å lime inn emojien.</p>
         </section>
         <section class="button">
-            <h2 class="p">Cat Emotes</h2>
-            <button class="cat_button" onclick="renderEmojis()">I'm feline fine</button>
-            <ul id="cat_list_ID" class="emoji"></ul>
-            <h2 class="p">Cat and Dog Emotes</h2>
-            <button class="general_button" onclick="renderEmojis()">Like Cats and Dogs</button>
-            <ul id="general_list_ID" class="emoji"></ul>
+            <button class="emoji_button" onclick="display_emojis()">Show list of Emotes</button>
         </section>
-        <section class="picture">
-            <img class="img" src="dog_picture.jpg"/>
+        <section class="emotes">
+            <ul id="cat_emoji_list_ID" class="emoji"></ul>
+            <ul id="dog_emoji_list_ID" class="emoji"></ul>
         </section>
     </main>
     <footer>
