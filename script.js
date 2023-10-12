@@ -1,6 +1,8 @@
 //HTML kobling
 const cat_list = document.querySelector("#cat_list_ID");
 
+const general_list = document.querySelector ("#general_list_ID");
+
 //Emoji-ressurs
 const emojis = {
   catEmojis: ["😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾", "🐱"],
