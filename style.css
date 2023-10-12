@@ -13,6 +13,7 @@ header, footer {
 main {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 5em;
     background-color: #0e4749;
@@ -20,9 +21,9 @@ main {
 
 .button {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    gap: 5em;
+    gap: 1em;
 }
 
 .p {

@@ -3,30 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat emojis</title>
+    <title>Emojis</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1 class="p">Cat emojis</h1>
+        <h1 class="p">Cat and Dog Emojis</h1>
     </header>
     <main>
-        <section class="feline">
-            <div class="button">
-                <button id="catID" onclick="generate_cat">I'm feline fine</button>
-            </div>
-            <div class="display">
-                <p id="pictureID" class="img">0</p>
-            </div>
+        <section class="button">
+            <h2 class="p">Cat Emotes</h2>
+            <button class="cat_button" onclick="renderEmojis()">I'm feline fine</button>
+            <ul id="cat_list_ID" class="img"></ul>
         </section>
-        <section class="canine">
-            <div class="button">
-                <button id="allID" onclick="generate_all">Cats and Dogs</button>
-            </div>
-            <div class="display">
-                <p id="pictureID" class="img">0</p>
-            </div>
+        <section class="button">
+            <h2 class="p">Cat and Dog Emotes</h2>
+            <button class="general_button" onclick="renderEmojis()">Like Cats and Dogs</button>
+            <ul id="general_list_ID" class="img"></ul>
         </section>
     </main>
     <footer>

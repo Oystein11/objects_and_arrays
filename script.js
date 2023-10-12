@@ -1,29 +1,21 @@
 //HTML kobling
-const displayer = document.querySelector ("pictureID");
-console.log (displayer);
+const cat_list = document.querySelector("#cat_list_ID");
 
-const cat_button = document.querySelector ("#catID");
-console.log (cat_button);
-
-const all_button = document.querySelector ("#allID");
-console.log (all_button);
-
-// Emoji-ressurs
+//Emoji-ressurs
 const emojis = {
-    catEmojis: ["😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾", "🐱"],
-    dogEmojis: ["🐶", "🐕", "🦮", "🐩", "🐾", "🐺", "🦊", "🦝", "🐕‍🦺", "🐩‍🦱"],
-    };
-console.log (emojis);
-
-//Display-variabel
-let display = 0;
-
-//Cat-button
-function generate_cat () {
- display > emojis.catEmojis, 1++;
+  catEmojis: ["😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾", "🐱"],
+  dogEmojis: ["🐶", "🐕", "🦮", "🐩", "🐾", "🐺", "🦊", "🦝", "🐕‍🦺", "🐩‍🦱"],
 };
 
-//All-button
-function generate_all () {
-
-};
+function renderEmojis() {
+  for (i = 0; i < emojis.catEmojis.length; i++) {
+    let newLiElement = document.createElement("li");
+    newLiElement.innerText = emojis.catEmojis[i];
+    newLiElement.addEventListener("click", () => {
+      navigator.clipboard.writeText(newLiElement.innerText);
+      alert(newLiElement.innerText + " is now on your clipboard ");
+      console.log(newLiElement.innerText);
+    });
+    cat_list.appendChild(newLiElement);
+  }
+}
